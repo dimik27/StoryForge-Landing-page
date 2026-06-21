@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    color: #0f172a;
+    background-color: #ffffff;
+  }
+}
+
+@layer components {
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px) {
+    .section-padding {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  .container-width {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #2040f5, #6184ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  /* Trust bar logos: normalise white/coloured/dark logos to consistent grey on white bg */
+  .logo-img {
+    filter: brightness(0) opacity(0.38);
+    transition: filter 0.2s ease;
+  }
+  .logo-img:hover {
+    filter: brightness(0) opacity(0.65);
+  }
+}
+
+/* ── HubSpot newsletter form — dark blue panel theme ── */
+.hs-form-container .hs-form {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Labels */
+.hs-form-container .hs-form label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgb(191 219 254); /* blue-200 */
+  margin-bottom: 0.375rem;
+  letter-spacing: 0.01em;
+}
+
+/* Hide the duplicate legend/fieldset label HubSpot adds */
+.hs-form-container .hs-form legend {
+  display: none;
+}
+
+/* Inputs */
+.hs-form-container .hs-input {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.875rem;
+  outline: none;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+  box-sizing: border-box;
+}
+.hs-form-container .hs-input::placeholder {
+  color: rgba(147, 197, 253, 0.6); /* blue-300/60 */
+}
+.hs-form-container .hs-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+/* Field wrappers — spacing */
+.hs-form-container .hs-form-field {
+  margin-bottom: 0.875rem;
+}
+
+/* Submit button */
+.hs-form-container .hs-submit {
+  margin-top: 0.25rem;
+}
+.hs-form-container input[type='submit'],
+.hs-form-container .hs-button {
+  width: 100%;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #1d4ed8; /* blue-700 */
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: inherit;
+}
+.hs-form-container input[type='submit']:hover,
+.hs-form-container .hs-button:hover {
+  background: #eff6ff; /* blue-50 */
+}
+
+/* Error messages */
+.hs-form-container .hs-error-msgs {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+}
+.hs-form-container .hs-error-msgs li label {
+  color: #fca5a5; /* red-300 */
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+
+/* GDPR / legal consent text */
+.hs-form-container .legal-consent-container,
+.hs-form-container .hs-richtext {
+  font-size: 0.7rem;
+  color: rgba(147, 197, 253, 0.7); /* blue-300/70 */
+  line-height: 1.5;
+  margin-top: 0.75rem;
+}
+.hs-form-container .legal-consent-container a,
+.hs-form-container .hs-richtext a {
+  color: #bfdbfe; /* blue-200 */
+  text-decoration: underline;
+}
+
+/* Success message */
+.hs-form-container .submitted-message {
+  color: #ffffff;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem 0;
+}
