@@ -28,7 +28,7 @@ const tiers: PricingTier[] = [
     highlighted: false,
   },
   {
-    name: 'Plus',
+    name: 'Standard',
     price: '€20',
     period: 'per seat / month',
     description: 'For growing product teams that need full artifact generation and collaboration.',
@@ -52,7 +52,7 @@ const tiers: PricingTier[] = [
     period: 'per seat / month',
     description: 'For enterprises that need advanced governance, custom workflows, and full control.',
     features: [
-      'Everything in Plus',
+      'Everything in Standard',
       'Custom artifact templates',
       'Role-based access control',
       'Advanced audit trail',
